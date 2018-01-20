@@ -40,9 +40,9 @@ services:
       - "./shared/postgresql/data:/var/lib/postgresql/data/pgdata"
     environment:
       PGDATA: /var/lib/postgresql/data/pgdata
-      POSTGRES_DB: my_db
-      POSTGRES_USER: my_db_user
-      POSTGRES_PASSWORD: my_db_password
+      POSTGRES_DB: ${dbname}
+      POSTGRES_USER: ${dbuser}
+      POSTGRES_PASSWORD: ${dbpwd}
   node:
     build:
       context: ./docker/node
