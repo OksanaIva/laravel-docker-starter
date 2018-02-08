@@ -2,7 +2,7 @@
 FROM node:8.9.1
 
 # Create app directory
-WORKDIR /var/www/site
+WORKDIR /var/www/html/site
 
 # Install app dependencies
 #RUN cd /var/www/site && npm install
