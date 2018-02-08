@@ -27,7 +27,7 @@ services:
     expose:
       - "9000"
     volumes:
-      - "./shared/site:/var/www/site"
+      - "./shared/site:/var/www/html/site"
   db:
     build:
       context: ./docker/postgresql
@@ -40,9 +40,9 @@ services:
       - "./shared/postgresql/data:/var/lib/postgresql/data/pgdata"
     environment:
       PGDATA: /var/lib/postgresql/data/pgdata
-      POSTGRES_DB: ${dbname}
-      POSTGRES_USER: ${dbuser}
-      POSTGRES_PASSWORD: ${dbpwd}
+      POSTGRES_DB: $DB_NAME
+      POSTGRES_USER: $DB_USER
+      POSTGRES_PASSWORD: $DB_PWD
   node:
     build:
       context: ./docker/node
