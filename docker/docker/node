@@ -1,2 +1,2 @@
 #!/bin/sh
-docker-compose run --rm -w /var/www/site -u `id -u`:`id -g` node bash
+docker-compose run -u `id -u`:`id -g` node bash
