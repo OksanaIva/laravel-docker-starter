@@ -4,7 +4,7 @@ upstream php-upstream {
 
 server {
     server_name ${servername};
-    root /var/www/site/public;
+    root /var/www/html/site/public;
 
     add_header X-Frame-Options "SAMEORIGIN";
     add_header X-XSS-Protection "1; mode=block";
