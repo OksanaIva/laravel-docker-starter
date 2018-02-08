@@ -54,6 +54,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
         && docker-php-ext-install intl \
         && rm -rf /var/lib/apt/lists/*
 
+WORKDIR /var/www/html/site
 
 COPY site.ini /usr/local/etc/php/conf.d
 
