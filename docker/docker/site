@@ -1,2 +1,2 @@
 #!/bin/sh
-docker exec -u www-data:www-data -it $1 /bin/bash -c "cd /var/www/site && /bin/bash"
+docker-compose run -u `id -u`:`id -g` php bash
