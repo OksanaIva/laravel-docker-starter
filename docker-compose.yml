@@ -27,7 +27,7 @@ services:
     expose:
       - "9000"
     volumes:
-      - "./shared/site:/var/www/html/site"
+      - "./site:/var/www/html/site"
   db:
     build:
       context: ./docker/postgresql
